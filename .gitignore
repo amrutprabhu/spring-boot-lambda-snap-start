@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+/deploy-lambda-with-terraform/.terraform.lock.hcl
+/deploy-lambda-with-terraform/.terraform/
