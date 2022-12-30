@@ -21,10 +21,7 @@ public class RequestHandlerApplication {
     }
 
     @Bean
-    public Function<Message<String>, Message<String>> toLowerCase() {
-        return apiRequest -> {
-            System.out.println("received :" + apiRequest.getPayload());
-            return new GenericMessage(apiRequest.getPayload().toLowerCase());
-        };
+    public Function<String, String> toLowerCase() {
+        return value -> value.toLowerCase();
     }
 }

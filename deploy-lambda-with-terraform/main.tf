@@ -13,11 +13,11 @@ provider "aws" {
 }
 
 module "lambda" {
-  source = "modules/lambda"
+  source = "./modules/lambda"
 }
 
-#deploy API gateway
-module "apiGateway" {
-  source = "modules/ApiGateway"
-  lambda_arn = "${module.lambda.lambda_arn}"
-}
+deploy API gateway
+ module "apiGateway" {
+   source = "./modules/ApiGateway"
+   lambda_arn = "${module.lambda.lambda_arn}"
+ }
